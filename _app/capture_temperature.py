@@ -29,34 +29,15 @@
 
 import requests
 
-url = 'http://172.16.248.9/status.json'
+#url = 'http://172.16.248.9/status.json'
+url = 'http://127.0.0.1:4087/example_data.php'
 response = requests.get(url)
 
 if response.status_code == 200:
     data = response.json()  # Parse the JSON response
     
     # Print the extracted data
-    print("Firmware:", data['firmware'])
-    print("Name:", data['name'])
-    print("Description:", data['description'])
-    print("MAC Address:", data['mac'])
     print("Temperature:", data['temp'])
     print("Humidity:", data['umid'])
-    print("External Temperature:", data['temp_ext'])
-    print("Dew Point:", data['dew'])
-    print("Input 1:", data['input1'])
-    print("Input 2:", data['input2'])
-    print("Output Alarm:", data['ouput_alarm'])
-    print("Max Temperature:", data['max_temp'])
-    print("Max Humidity:", data['max_umid'])
-    print("Max External Temperature:", data['max_temp_ext'])
-    print("Min Temperature:", data['min_temp'])
-    print("Min Humidity:", data['min_umid'])
-    print("Min External Temperature:", data['min_temp_ext'])
-    print("S1 History:", data['s1hist'])
-    print("S2 History:", data['s2hist'])
-    print("S3 History:", data['s3hist'])
-    print("Input 1 Mode:", data['input1_mode'])
-    print("Input 2 Mode:", data['input2_mode'])
 else:
     print("Failed to retrieve data. HTTP Status code:", response.status_code)
