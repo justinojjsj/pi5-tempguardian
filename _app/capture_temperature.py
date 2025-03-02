@@ -1,43 +1,25 @@
-# from selenium import webdriver
-# from selenium.webdriver.common.by import By
-# from selenium.webdriver.firefox.options import Options
-# from datetime import date
-# from datetime import datetime
-# import mysql.connector
-# import time
-# db_connection = mysql.connector.connect(host='127.0.0.1', user='root', password='tX84c=7OljSX', database='db_tempguardian')
-
-# #Setando opções do driver firefox
-# f_options=Options()
-# f_options.add_argument("-headless")  
-# options = webdriver.FirefoxOptions()  
-# webBrowser = webdriver.Firefox(options=f_options)
-
-# #Site dos dados para serem capturados
-# webBrowser.get('http://172.16.248.9/status.json')
-
-# #Tempo de espera para carregar os dados na página adequadamente
-# #time.sleep(10)
-
-# #Classe a ser capturada
-# #conteudo = webBrowser.find_element(By.CLASS_NAME, "cmp-modalCamera__alerts").text
-# webBrowser.close()
-
-#Separa o conteúdo em vetor
-#conteudo = conteudo.splitlines()
-#tamanho = len(conteudo)
-
 import requests
+from datetime import datetime
 
+# URL do serviço que retorna os dados em JSON
 #url = 'http://172.16.248.9/status.json'
-url = 'http://127.0.0.1:4087/example_data.php'
+url = 'http://127.0.0.1:4087/status.json'
+
+# Fazendo a requisição GET para obter os dados JSON
 response = requests.get(url)
 
 if response.status_code == 200:
-    data = response.json()  # Parse the JSON response
+    data = response.json()  # Parse a resposta JSON
     
-    # Print the extracted data
+    # Obtendo a data e hora atuais formatadas
+    current_datetime = datetime.now()
+    current_date = current_datetime.strftime("%Y-%m-%d")  # Formato: YYYY-MM-DD
+    current_time = current_datetime.strftime("%H:%M:%S")  # Formato: HH:MM:SS
+    
+    # Exibindo os dados
+    print("Date:", current_date)
+    print("Hour:", current_time)
     print("Temperature:", data['temp'])
     print("Humidity:", data['umid'])
 else:
-    print("Failed to retrieve data. HTTP Status code:", response.status_code)
+    print("Falha ao recuperar os dados. Código de status HTTP:", response.status_code)
