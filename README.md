@@ -50,9 +50,9 @@ Para funcionar os sistemas é necessário:
     - Selecionar opção 1 (vai selecionar o editor de texto NANO)
     - Copiar a seguinte linha ao final do arquivo (remova o espaço antes e depois)
     ```
-    0,15,30,45 * * * * /app/exec.sh
+    0,15,30,45 * * * * /app/script_executor.sh
     ```
     - Ctrl+o para salvar arquivo, Ctrol+x para sair do arquivo:
     - Digitar no terminal
     ```
-    chmod u+x /app/exec.sh
+    chmod u+x /app/script_executor.sh
