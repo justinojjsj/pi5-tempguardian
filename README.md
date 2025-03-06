@@ -16,6 +16,8 @@ Para funcionar os sistemas é necessário:
     - Sistema Operacional Linux: Apenas instalar o docker.
 
 2. Fazer um clone no repositório https://github.com/justinojjsj/pi5-tempguardian.git
+    - * *Por favor, antes de dar um push, crie sua branch, não dê push diretamente na main* *
+    
 3. Criar a rede docker que será compartilhada entre os sistemas:
     ```
     docker network create --subnet=168.18.0.0/24 rede_default
