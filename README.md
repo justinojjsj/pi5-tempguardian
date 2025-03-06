@@ -36,6 +36,8 @@ Para funcionar os sistemas é necessário:
         - Encontrar o arquivo docker-compose.yaml
         - Clicar com o botão direito no arquivo e clicar em [compose-up]
 
+    - Observação: Em sistema operacional Rwindows (rsrs), deve entrar no arquivo docker-entrypoint.sh e converter o final de linha de CRLF para LF (usando o VSCODE no canto inferior direito da janela). Após essa conversão, de o docker-compose up -d para rodar o container python corretamente.
+
 5. Após estar com os containers em execução acessar o PhpmyAdmin através do navegador (usuário: root senha: tX84c=7OljSX):
     ```
     127.0.0.1:4089 
