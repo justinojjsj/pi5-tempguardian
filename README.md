@@ -69,17 +69,17 @@ Para funcionar os sistemas é necessário:
 
 8. Observações:
 
-- A versão do python que está sendo instalada no container é a 3.7.5. Portanto, caso queira executar o script diretamente da sua máquina instale essa versão (ou utilize um ambiente python com essa versão pelo pyenv: https://blog.accurate.com.br/tutorial-pyenv/#Habilitando_o_ambiente_virtual_LinuxMacOs)
+    - A versão do python que está sendo instalada no container é a 3.7.5. Portanto, caso queira executar o script diretamente da sua máquina instale essa versão (ou utilize um ambiente python com essa versão pelo pyenv: https://blog.accurate.com.br/tutorial-pyenv/#Habilitando_o_ambiente_virtual_LinuxMacOs)
 
-- Caso não queira ou possa instalar o python, utilize o próprio container para executar o script:
+    - Caso não queira ou possa instalar o python, utilize o próprio container para executar o script:
 
-```
-docker exec -it tempguardian_python bash
-```
+    ```
+    docker exec -it tempguardian_python bash
+    ```
 
-- Em seguida execute:
+    - Em seguida execute:
 
-```
-python capture_temperature.py
-```
+    ```
+    python capture_temperature.py
+    ```
 
