@@ -12,7 +12,7 @@ Para funcionar os sistemas é necessário:
     -  Sistema Operacional Windows:
         - Instalar o docker desktop;
         - Fazer login do docker hub e conectar ao docker destop;
-        - IMPORTANTE: Reiniciar a máquina quando estiver tudo ok, antes de seguir para os próprios passos.
+        - **IMPORTANTE**: Reiniciar a máquina quando estiver tudo ok, antes de seguir para os próprios passos.
     - Sistema Operacional linux: Apenas instalar o docker.
 
 2. Fazer um clone no repositório https://github.com/justinojjsj/pi5-tempguardian.git
