@@ -9,6 +9,11 @@ O sistema tem a função de capturar os dados via rede de um sensor de temperatu
 Para funcionar os sistemas é necessário:
 
 1. Instalar o docker desktop
+  1.1.  Sistema Operacional Windows:
+    1.1.1. Instalar o docker desktop;
+    1.1.2. Fazer login do docker hub e conectar ao docker destop;
+    1.1.3. IMPORTANTE: Reiniciar a máquina quando estiver tudo ok, antes de seguir para os próprios passos.
+
 2. Fazer um clone no repositório https://github.com/justinojjsj/pi5-tempguardian.git
 3. Criar a rede docker que será compartilhada entre os sistemas:
     ```
