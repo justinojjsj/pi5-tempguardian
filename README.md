@@ -10,7 +10,7 @@ Para funcionar os sistemas é necessário:
 
 1. Instalar o docker:
     -  Sistema Operacional Windows:
-        - Instalar o docker desktop;
+        - Instalar o docker desktop (como administrador);
         - Fazer login do docker hub e conectar ao docker destop;
         - **IMPORTANTE**: Reiniciar a máquina quando estiver tudo ok, antes de seguir para os próprios passos.
     - Sistema Operacional Linux: Apenas instalar o docker.
@@ -23,18 +23,18 @@ Para funcionar os sistemas é necessário:
     docker network create --subnet=168.18.0.0/24 rede_default
     ```
 4. Executar os containers docker. Existem duas formas:
-- Método 1: 
-    - Utilizando o power shell (windows) ou terminal (linux) acessar o diretório onde está salvo o arquivo docker-compose.yaml
-    - Digitar o seguinte comando: 
-    ```
-    docker-compose up -d
-    ```
-- Método 2:
-    - Instalar o VSCODE
-    - Instalar o plugin docker
-    - Abrir o projeto pi5-tempguardian no VSCODE
-    - Encontrar o arquivo docker-compose.yaml
-    - Clicar com o botão direito no arquivo e clicar em [compose-up]
+    - Método 1: 
+        - Utilizando o power shell (windows) ou terminal (linux) acessar o diretório onde está salvo o arquivo docker-compose.yaml
+        - Digitar o seguinte comando: 
+        ```
+        docker-compose up -d
+        ```
+    - Método 2:
+        - Instalar o VSCODE
+        - Instalar o plugin docker
+        - Abrir o projeto pi5-tempguardian no VSCODE
+        - Encontrar o arquivo docker-compose.yaml
+        - Clicar com o botão direito no arquivo e clicar em [compose-up]
 
 5. Após estar com os containers em execução acessar o PhpmyAdmin através do navegador (usuário: root senha: tX84c=7OljSX):
     ```
@@ -47,7 +47,8 @@ Para funcionar os sistemas é necessário:
     ```
     127.0.0.1:4087
     ```
-* *Passos necessários somente se for executar os scripts (shell e python)* *
+
+*Passos necessários somente se for executar os scripts (shell e python)* 
 
 7. Executar os containers e configurar o cron (esse passo não é necessário, a não ser que o sistema não esteja sendo alimentado automaticamente):
     ```
