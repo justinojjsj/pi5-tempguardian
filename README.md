@@ -13,7 +13,7 @@ Para funcionar os sistemas é necessário:
         - Instalar o docker desktop;
         - Fazer login do docker hub e conectar ao docker destop;
         - **IMPORTANTE**: Reiniciar a máquina quando estiver tudo ok, antes de seguir para os próprios passos.
-    - Sistema Operacional linux: Apenas instalar o docker.
+    - Sistema Operacional Linux: Apenas instalar o docker.
 
 2. Fazer um clone no repositório https://github.com/justinojjsj/pi5-tempguardian.git
 3. Criar a rede docker que será compartilhada entre os sistemas:
@@ -45,6 +45,7 @@ Para funcionar os sistemas é necessário:
     ```
     127.0.0.1:4087
     ```
+* *Passos necessários somente se for executar os scripts (shell e python)* *
 
 7. Executar os containers e configurar o cron (esse passo não é necessário, a não ser que o sistema não esteja sendo alimentado automaticamente):
     ```
@@ -73,7 +74,7 @@ Para funcionar os sistemas é necessário:
 docker exec -it tempguardian_python bash
 ```
 
-Em seguida execute:
+- Em seguida execute:
 
 ```
 python capture_temperature.py
