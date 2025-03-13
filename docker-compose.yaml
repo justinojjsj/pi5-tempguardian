@@ -12,7 +12,8 @@ services:
     ports:
       - 4087:80
     networks:
-      - rede_default
+      rede_default:
+        ipv4_address: 168.18.0.2
     working_dir: /var/www/html
     environment:
       PHP_ERROR_REPORTING: E_ALL & ~E_NOTICE
@@ -38,7 +39,8 @@ services:
     ports:
       - 4088:3306
     networks:
-      - rede_default
+      rede_default:
+        ipv4_address: 168.18.0.3
     environment:
       MYSQL_ROOT_PASSWORD: tX84c=7OljSX
       MYSQL_DATABASE: db_tempguardian
@@ -53,7 +55,8 @@ services:
     ports:
       - 4089:80
     networks:
-      - rede_default
+      rede_default:
+        ipv4_address: 168.18.0.4
     environment:
       PMA_HOST: container_tempguardian_db
       MYSQL_ROOT_PASSWORD: tX84c=7OljSX
@@ -73,7 +76,8 @@ services:
       - ./_app:/app 
     tty: true
     networks:
-      - rede_default
+      rede_default:
+        ipv4_address: 168.18.0.5
     environment:
       TZ: "America/Sao_Paulo"
 
@@ -82,4 +86,4 @@ volumes:
 
 networks:
   rede_default:
-    external: true 
+    external: true

@@ -20,7 +20,7 @@ Para funcionar os sistemas é necessário:
     
 3. Criar a rede docker que será compartilhada entre os sistemas:
     ```
-    docker network create --subnet=168.18.0.0/24 rede_default
+    docker network create --subnet=168.18.0.0/16 rede_default
     ```
 4. Executar os containers docker. Existem duas formas:
     - Método 1: 
