@@ -8,13 +8,6 @@ import mysql.connector
 # Capturar do servidor oficial
 url = 'http://172.16.248.9/status.json'
 
-# Capturar da máquina local, quando executado o python no computador hóspede
-#url = 'http://127.0.0.1:4087/status.json'
-
-# Capturar da máquina local, quando executado o python no computador hóspedeiro (ou seja, o container)
-#url = 'http://168.18.0.5/status.json'
-
-
 # Conexão com o banco de dados MySQL
 def connect_to_database():
     return mysql.connector.connect(
