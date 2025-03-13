@@ -1,12 +1,28 @@
 import requests
 from datetime import datetime
+import time
 
 # URL do serviço que retorna os dados em JSON
-#url = 'http://172.16.248.9/status.json'
-url = 'http://127.0.0.1:4087/status.json'
+
+# Capturar do servidor oficial
+url = 'http://172.16.248.9/status.json'
+
+# Capturar da máquina local, quando executado o python no computador hóspede
+#url = 'http://127.0.0.1:4087/status.json'
+
+# Capturar da máquina local, quando executado o python no computador hóspedeiro (ou seja, o container)
+#url = 'http://168.18.0.5/status.json'
 
 # Fazendo a requisição GET para obter os dados JSON
-response = requests.get(url)
+response = requests.get(url, timeout=10)
+
+for _ in range(5):  # Tentar até 5 vezes
+    try:
+        response = requests.get(url, timeout=10)
+        break  # Sair do loop se a requisição for bem-sucedida
+    except requests.exceptions.RequestException as e:
+        print(f"Falha na requisição: {e}, tentando novamente...")
+        time.sleep(5)  # Esperar antes de tentar novamente
 
 if response.status_code == 200:
     data = response.json()  # Parse a resposta JSON
