@@ -89,5 +89,5 @@ Para funcionar os sistemas é necessário:
 
     - É executado um backup do banco de dados todos os dias às 23:55 e disponibilizado na pasta _db/ANO-MÊS
     - Os dados mais recentes estarão nos backups mais atuais (verificar a data)
-    - Será dado um push na branch db-atualizado todos os dias às 23:59
+    - Será dado um push na branch db_e_log-atualizados todos os dias às 23:59
     - O script que executa o backup está no .gitignore

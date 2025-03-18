@@ -1,0 +1,2 @@
+55 23 * * * /home/silvajunior/desenvolvimento/pi5-tempguardian/_script/backup_db.sh
+59 23 * * * /home/silvajunior/desenvolvimento/pi5-tempguardian/_script/push_db.sh
