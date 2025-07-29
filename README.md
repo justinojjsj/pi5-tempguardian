@@ -2,7 +2,7 @@
 
 ## JUSTIFICATIVA DO SISTEMA
 
-O sistema tem a função de capturar os dados via rede de um sensor de temperatura e umidade (industrial), armazenar as informações e gerar relatórios, a fim que se possa fazer uma gestão mais eficiente de energia. Dessa forma o nome TempGuardian refere-se ao guardião de temperatura, função do sistema.
+O sistema tem a função de capturar os dados via rede de um sensor de temperatura e umidade (industrial), armazenar as informações e gerar relatórios, a fim que se possa fazer uma gestão mais eficiente de energia. Dessa forma, o nome TempGuardian refere-se ao guardião de temperatura, função do sistema.
 
 ## COMO CONFIGURAR OS SISTEMAS
 
@@ -12,7 +12,7 @@ Para funcionar os sistemas é necessário:
     -  Sistema Operacional Windows:
         - Instalar o docker desktop (como administrador);
         - Fazer login do docker hub e conectar ao docker destop;
-        - **IMPORTANTE**: Reiniciar a máquina quando estiver tudo ok, antes de seguir para os próprios passos.
+        - **IMPORTANTE**: Reiniciar a máquina quando estiver tudo ok, antes de seguir para os próximos passos.
     - Sistema Operacional Linux: Apenas instalar o docker.
 
 2. Fazer um clone no repositório https://github.com/justinojjsj/pi5-tempguardian.git
@@ -36,11 +36,19 @@ Para funcionar os sistemas é necessário:
         - Encontrar o arquivo docker-compose.yaml
         - Clicar com o botão direito no arquivo e clicar em [compose-up]
 
-    - Observação: Em sistema operacional Rwindows (rsrs), deve entrar no arquivo docker-entrypoint.sh e converter o final de linha de CRLF para LF (usando o VSCODE no canto inferior direito da janela). Após essa conversão, de o docker-compose up -d para rodar o container python corretamente.
+    - Observação: Em sistema operacional Rwindows (rsrs), deve entrar no arquivo docker-entrypoint.sh e converter o final de linha de CRLF para LF (usando o VSCODE no canto inferior direito da janela). Após essa conversão, dê o docker-compose up -d para rodar o container python corretamente.
 
 5. Após estar com os containers em execução acessar o PhpmyAdmin através do navegador (usuário: root senha: tX84c=7OljSX):
     ```
     127.0.0.1:4089 
+    ```
+
+    ```
+    root
+    ```
+    
+    ```
+    tX84c=7OljSX
     ```
     - Criar um banco de dados com o nome: db_tempguardian
     - Importar arquivo db_DDMMYYYY.sql (mais recente) que está na pasta _db
